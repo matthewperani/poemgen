@@ -8,4 +8,4 @@ $$$$$$$$$$$$$$$$$$$$$
 STEPS TO RUN LOCALLY:
 
 $ pip install requests
-$ python wordgen.py
+$ python test.py
