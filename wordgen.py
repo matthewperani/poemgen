@@ -33,9 +33,41 @@ def syllable_count(word):
 	
 	return num_syllables
 	
+def haiku_gen():
+	"""Generates a haiku using other module lins from wordgen."""
+	
+	line_1_count = 5
+	line_1 = ""
+	
+	while line_1_count > 0:
+		word = generate_word()
+		syl_count = syllable_count(word)
+		if line_1_count >= syl_count:
+			line_1 += " " + word
+			line_1_count = line_1_count - syl_count
+	
+	line_2_count = 7
+	line_2 = ""
+	
+	while line_2_count > 0:
+		word = generate_word()
+		syl_count = syllable_count(word)
+		if line_2_count >= syl_count:
+			line_2 += " " + word
+			line_2_count = line_2_count - syl_count
+	
+	
+	line_3_count = 5
+	line_3 = ""
+	
+	while line_3_count > 0:
+		word = generate_word()
+		syl_count = syllable_count(word)
+		if line_3_count >= syl_count:
+			line_3 += " " + word
+			line_3_count = line_3_count - syl_count
 
-
-
-
-
+	print(line_1)
+	print(line_2)
+	print(line_3)
 

@@ -1,7 +1,8 @@
 import wordgen
 
-word = wordgen.generate_word()
-num_syllable = wordgen.syllable_count(word)
+#word = wordgen.generate_word()
+#num_syllable = wordgen.syllable_count(word)
 
-print(word + ", syllables: " + str(num_syllable))
+#print(word + ", syllables: " + str(num_syllable)
 
+wordgen.haiku_gen()
