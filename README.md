@@ -15,6 +15,9 @@ Sources/APIs used:
 
 	(inspired by: https://stackoverflow.com/questions/18834636/random-word-generator-python)
 	
+3) Grammar Check API
+	https://www.grammarbot.io/quickstart
+	
 $$$$$$$$$$$$$$$$$$$$$
 
 STEPS TO RUN LOCALLY:

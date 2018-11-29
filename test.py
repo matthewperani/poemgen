@@ -6,3 +6,5 @@ import wordgen
 #print(word + ", syllables: " + str(num_syllable)
 
 wordgen.haiku_gen()
+
+#print(wordgen.check_grammar("You is thrill"))
