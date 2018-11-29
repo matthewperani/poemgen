@@ -19,9 +19,24 @@ $$$$$$$$$$$$$$$$$$$$$
 
 STEPS TO RUN LOCALLY:
 
-$ pip install requests
+TO GENERATE HAIKU TO CONSOLE
+	Clone and navigate to root level of this repo.
 
-$ python test.py
+	$ pip install requests
+
+	$ python test.py
+
+TO RUN AS LOCAL WEBAPP:
+
+	Clone and navigate to root level of this repo.
+
+	$ pip install requests
+
+	$ pip install flask
+
+	$ python api.py
+
+	Then, navigate to http://localhost:5000/haiku to see a randomly generated haiku!
 
 
 

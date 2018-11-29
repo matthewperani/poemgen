@@ -67,7 +67,17 @@ def haiku_gen():
 			line_3 += " " + word
 			line_3_count = line_3_count - syl_count
 
+	# Print generated haiku locally 
 	print(line_1)
 	print(line_2)
 	print(line_3)
-
+	
+	# Prepare for JSON output
+	output = {}
+	output['line_1'] = line_1
+	output['line_2'] = line_2
+	output['line_3'] = line_3
+	output['haiku'] = line_1 + '/n' + line_2 + '/n' + line_3
+	json_output = json.dumps(output)
+	
+	return json_output
