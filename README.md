@@ -19,7 +19,8 @@ $$$$$$$$$$$$$$$$$$$$$
 
 STEPS TO RUN LOCALLY:
 
-TO GENERATE HAIKU TO CONSOLE
+TO GENERATE HAIKU TO CONSOLE:
+
 	Clone and navigate to root level of this repo.
 
 	$ pip install requests
