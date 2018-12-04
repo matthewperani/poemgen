@@ -1,4 +1,4 @@
-import requests, random, json, urllib.parse
+import requests, random, json, urllib.parse, time
 
 
 def generate_word():
@@ -42,8 +42,12 @@ def haiku_gen():
 	line_2 = ""
 	line_3_count = 5
 	line_3 = ""
+	words_generated = 0
+	
+	start = time.time()
 	
 	while line_1_count > 0 or line_2_count > 0 or line_3_count > 0:
+		words_generated += 1
 		word = generate_word()
 		syl_count = syllable_count(word)
 		if line_1_count >= syl_count:
@@ -56,10 +60,16 @@ def haiku_gen():
 			line_3 += " " + word
 			line_3_count = line_3_count - syl_count
 
+	end = time.time()
+	
 	# Print generated haiku locally 
 	print(line_1)
 	print(line_2)
 	print(line_3)
+	
+	# Performance info
+	print("Number of words generated: " + str(words_generated))
+	print("Time taken (seconds): " + str(end - start))
 	
 	# Prepare for JSON output
 	output = {}
