@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/matthewperani/poemgen/issues"
   },
-  "homepage": "https://github.com/matthewperani/poemgen#readme"
+  "homepage": "https://github.com/matthewperani/poemgen#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0"
+  }
 }
