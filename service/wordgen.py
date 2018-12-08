@@ -3,20 +3,25 @@ import requests, random, json, urllib.parse, time
 
 def generate_word():
 	"""Generate a single random word."""
+
+	start = time.time()
+
 	word_site = "http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain"
 	
 	response = requests.get(word_site)
 	
 	# makes list of all words
 	WORDS = response.content.splitlines()
-	
 	listSize = len(WORDS)
-	
 	randIndex = random.randrange(0, listSize)
-	
 	randWordRaw = WORDS[randIndex]
-	
 	randWord = randWordRaw.decode("utf-8")
+
+	end = time.time()
+
+	# Performance info
+	print("generate_word result: " + randWord)
+	print("generate_word time taken (seconds): " + str(end - start))
 	
 	return randWord
 
@@ -68,8 +73,8 @@ def haiku_gen():
 	print(line_3)
 	
 	# Performance info
-	print("Number of words generated: " + str(words_generated))
-	print("Time taken (seconds): " + str(end - start))
+	print("kaiku_gen number of words generated: " + str(words_generated))
+	print("haiku_gen time taken (seconds): " + str(end - start))
 	
 	# Prepare for JSON output
 	output = {}
