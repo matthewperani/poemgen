@@ -17,6 +17,22 @@ Sources/APIs used:
 
 STEPS TO RUN LOCALLY:
 
+(As dockerfile)
+
+	# Clone repo and navigate to service directory 
+
+	# Build image
+	$ docker build -t "poemgen" .
+
+	# Run image
+	$ docker run -p 5000:5000 poemgen
+
+	# Generate haiku at http://localhost:5000/haiku
+
+
+
+(As local python app)
+
 TO GENERATE HAIKU TO CONSOLE:
 
 	Clone and navigate to root level of this repo.
