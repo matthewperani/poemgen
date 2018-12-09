@@ -17,7 +17,7 @@ Sources/APIs used:
 
 STEPS TO RUN LOCALLY:
 
-(As dockerfile)
+(As docker image)
 
 	# Clone repo and navigate to service directory 
 
