@@ -43,4 +43,7 @@ TO RUN AS LOCAL WEBAPP:
 	Then, navigate to http://localhost:5000/haiku to see a randomly generated haiku!
 
 
+TO RUN UI
 
+	npm run build 
+	npm start
