@@ -8,6 +8,10 @@ app = Flask(__name__)
 def home_page():
 	return 'Welcome to poemgen!  Try hitting /haiku endpoint'
 	
+@app.route('/word')
+def word_page():
+	return wordgen.generate_word()
+
 @app.route('/haiku')
 def haiku_page():
 	return wordgen.haiku_gen()

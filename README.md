@@ -1,24 +1,19 @@
 # poemgen
 A project to generate a random poem.
 
-In progress
-
-$$$$$$$$$$$$$$$$$$$$
-
 Sources/APIs used:
 
-1) Syllable count reference:
-	http://www.datamuse.com/api/
-	
-2) Word list
-	http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain
+	1) Syllable count reference:
+		http://www.datamuse.com/api/
+		
+	2) Word list
+		http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain
 
-	(inspired by: https://stackoverflow.com/questions/18834636/random-word-generator-python)
-	
-3) Grammar Check API
-	https://www.grammarbot.io/quickstart
-	
-$$$$$$$$$$$$$$$$$$$$$
+		(inspired by: https://stackoverflow.com/questions/18834636/random-word-generator-python)
+		
+	3) Grammar Check API
+		https://www.grammarbot.io/quickstart
+
 
 STEPS TO RUN LOCALLY:
 
@@ -26,7 +21,11 @@ TO GENERATE HAIKU TO CONSOLE:
 
 	Clone and navigate to root level of this repo.
 
-	$ pip install requests
+	(RECOMMENDED TO MAKE VIRTUALENV FOR PROJECT...  see here: https://packaging.python.org/guides/installing-using-pip-and-virtualenv/)
+
+	$ cd service
+
+	$ pip install -r requirements.py
 
 	$ python test.py
 
@@ -34,9 +33,11 @@ TO RUN AS LOCAL WEBAPP:
 
 	Clone and navigate to root level of this repo.
 
-	$ pip install requests
+	(RECOMMENDED TO MAKE VIRTUALENV FOR PROJECT...  see here: https://packaging.python.org/guides/installing-using-pip-and-virtualenv/)
 
-	$ pip install flask
+	$ cd service
+
+	$ pip install -r requirements.py
 
 	$ python api.py
 
