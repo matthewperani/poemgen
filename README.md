@@ -17,7 +17,7 @@ Sources/APIs used:
 
 STEPS TO RUN LOCALLY:
 
-(As docker image)
+(As docker image):
 
 	# Clone repo and navigate to service directory 
 
@@ -31,7 +31,7 @@ STEPS TO RUN LOCALLY:
 
 
 
-(As local python app)
+(As local python app):
 
 TO GENERATE HAIKU TO CONSOLE:
 
