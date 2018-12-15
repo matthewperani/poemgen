@@ -28,7 +28,7 @@ STEPS TO RUN LOCALLY:
 	$ docker run -p 5000:5000 poemgen
 
 	# Generate haiku at http://localhost:5000/haiku
-
+	# On Windows Home http://192.168.99.100:5000/haiku
 
 
 (As local python app):
