@@ -81,7 +81,7 @@ def haiku_gen():
 	output['line_1'] = line_1
 	output['line_2'] = line_2
 	output['line_3'] = line_3
-	output['haiku'] = line_1 + '/n' + line_2 + '/n' + line_3
+	output['haiku'] = line_1 + '\n' + line_2 + '\n' + line_3
 	json_output = json.dumps(output)
 	
 	return json_output
