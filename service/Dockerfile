@@ -14,6 +14,9 @@ COPY api.py /app/api.py
 EXPOSE 5000
 EXPOSE 8080
 
+RUN ls /usr/share/dict
+RUN cat /usr/dict/share/words
+
 # run app
 CMD ["python", "-u", "api.py"]
 
