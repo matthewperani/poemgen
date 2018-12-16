@@ -1,5 +1,6 @@
 import requests, random, json, urllib.parse, time
 
+print("hello from poemgen")
 
 def generate_word():
 	"""Generate a single random word."""

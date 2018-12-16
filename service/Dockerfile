@@ -10,6 +10,9 @@ RUN pip install -r /app/requirements.txt
 COPY wordgen.py /app/wordgen.py
 COPY api.py /app/api.py
 
+# copy data
+COPY data/words.txt /app/data/words.txt
+
 # expose ports
 EXPOSE 5000
 EXPOSE 8080
