@@ -1,22 +1,21 @@
 import requests, random, json, urllib.parse, time
 
-print("hello from poemgen")
+# initialize word list
+start = time.time()
+file = open("data/words.txt", 'r')
+wordList = file.readlines()
+listSize = len(wordList)
+end = time.time()
+print("initial word list generated in: " + str(end - start))
+print("word list size: " + str(len(wordList)))
 
 def generate_word():
 	"""Generate a single random word."""
 
 	start = time.time()
 
-	word_site = "http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain"
-	
-	response = requests.get(word_site)
-	
-	# makes list of all words
-	WORDS = response.content.splitlines()
-	listSize = len(WORDS)
 	randIndex = random.randrange(0, listSize)
-	randWordRaw = WORDS[randIndex]
-	randWord = randWordRaw.decode("utf-8")
+	randWord = wordList[randIndex]
 
 	end = time.time()
 
@@ -31,6 +30,8 @@ def syllable_count(word):
 	"""Return number of syllables in input word."""
 	data_site = "https://api.datamuse.com/words?max=1&md=ps&sp=" + word
 	
+	print(data_site)
+
 	resp = requests.get(data_site)
 	
 	word_data = json.loads(resp.content)	
@@ -53,9 +54,20 @@ def haiku_gen():
 	start = time.time()
 	
 	while line_1_count > 0 or line_2_count > 0 or line_3_count > 0:
-		words_generated += 1
-		word = generate_word()
-		syl_count = syllable_count(word)
+
+		retries = 5
+		word = ""
+		syl_count = 0
+		while syl_count == 0 and retries > 0:
+			try:
+				word = generate_word()
+				words_generated += 1
+				syl_count = syllable_count(word)
+			except: 
+				retries = retries - 1
+				if retries == 0:
+					raise RuntimeWarning
+
 		if line_1_count >= syl_count:
 			line_1 += " " + word
 			line_1_count = line_1_count - syl_count
