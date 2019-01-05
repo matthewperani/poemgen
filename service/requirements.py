@@ -1,3 +1,3 @@
 requests
 flask
-flask_cors
+flask-cors
